@@ -119,8 +119,8 @@ body {
   margin: 30px auto 10px;
 }
 
-.hamburger span:after,
-.hamburger span:before {
+.hamburger span::after,
+.hamburger span::before {
   content: "";
   position: absolute;
   left: 0;

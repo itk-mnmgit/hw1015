@@ -39,6 +39,55 @@ $(function(){
     $(this).append("<span>後</span>");
   });
 
+  $(".js-toggle").on("click", function() {
+    $(this).toggleClass("on");
+    $(this)
+      .siblings()
+      .slideToggle();
+  });
+
+  //ハンバーガーメニュー
+  $(".js-hamburger").on("click", function() {
+    $(this).toggleClass("on");
+  });
+
+  //スムーススクロール
+  $(".js-scroll").on("click", function() {
+    $("body, html").animate({ scrollTop: 0 }, 500);
+  });
+
+  //モーダル
+  $(".js-modal").on("click", function() {
+    $("body").addClass("modal-open");
+    $(".modal-content").fadeIn("slow");
+    $("#modal-bg").fadeIn("slow");
+  });
+
+  $(".js-modal-close").on("click", function() {
+    $("body").removeClass("modal-open");
+    $(".modal-content").fadeOut(1000);
+    $("#modal-bg").fadeOut(1000);
+  });
+
+  // タブメニュー
+  $(".tab-nav a").on("click", function() {
+    if ($(this).hasClass("active")) {
+      //同じ場所をクリックした場合は処理終了
+      return false;
+    }
+
+    console.log(this.hash);
+    // 初期化
+    $(".tab-nav a").removeClass("active");
+    // 押されたボタンにacutive追加
+    $(this).addClass("active");
+
+    $(".tab-content > div").removeClass("active");
+    $(".tab-content > div").filter(this.hash).addClass("active");
+
+    return false;
+  });
+
   //宿題
   $('#js-picshow-btn').on('click', function(){
     $('#pic').fadeIn(1000);

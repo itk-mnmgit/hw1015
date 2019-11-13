@@ -63,19 +63,111 @@
       </div>
   </div>
 
+  <div class="q-box">
+    <h2>Q5.toggle 黒いボタンをクリック</h2>
+    <p class="description">
+      下の例のように、最初に小項目を隠して大項目のみ表示したい時に使えます。
+    </p>
+    <dl class="toggle-menu">
+      <dt class="js-toggle">関東</dt>
+      <dd>東京</dd>
+      <dd>千葉</dd>
+      <dd>埼玉</dd>
+      <dd>神奈川</dd>
+      <dd>茨城</dd>
+      <dd>栃木</dd>
+      <dd>群馬</dd>
+    </dl>
+  </div>
+
+  <div class="q-box">
+    <h2>Q6.ハンバーガーメニュー</h2>
+    <p class="description">
+      スマートフォンサイトのヘッダーなどで良く使われます。
+      ※アニメーションはCSSです。
+    </p>
+    <div id="toggle" class="js-hamburger hamburger">
+      <span></span>
+    </div>
+  </div>
+
+  <div class="q-box">
+    <h2>Q7.スムーススクロール</h2>
+    <p class="description">
+      ページTOPに戻るだけでなく、
+      ページ内の特定箇所に移動するときのアニメーションをつけることにも
+      使うことができます。
+    </p>
+    <div class="btn-wrapper">
+      <a class="btn js-scroll">ページTOPに戻る</a>
+    </div>
+  </div>
+
+  <div class="q-box">
+      <h2>Q8.モーダル</h2>
+      <p class="description">
+        webアプリにアカウント登録する際に重要事項を表示したりする
+      </p>
+      <div class="btn-wrapper modal-wrapper">
+        <div class="btn js-modal">ボタン</div>
+        <div class="modal-content">
+          <div class="modal-close js-modal-close">
+            <span>×</span>
+          </div>
+          <p>モーダル</p>
+        </div>
+        <div id="modal-bg" class="js-modal-close"></div>
+      </div>
+    </div>
+
+    <div class="q-box">
+        <h2>Q9.タブメニュー</h2>
+        <p class="description">
+          ニュースのようにジャンルごとにタブで分けたい場合などに使えます。
+        </p>
+        <div class="d-flex">
+            <!-- ul.tab-nav>(li>a[href={#tab0$}])*3 -->
+          <ul class="tab-nav">
+            <li><a href="#tab01" class="active">HTML</a></li>
+            <li><a href="#tab02">CSS</a></li>
+            <li><a href="#tab03">JavaScript</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="tab01"　class="active">
+                HTMLとは HTMLとは、Hyper Text Markup Language
+                （ハイパーテキスト・マークアップ・ランゲージ）の略で、
+                Webページを作るための最も基本的なマークアップ言語のひとつです。
+                普段、私たちがブラウザで観ているWebページのほとんどが、
+                HTMLで作られています。
+            </div>
+            <div id="tab02">
+                CSS（Cascading Style
+                Sheets、カスケーディング・スタイル・シート）とは、
+                ウェブページのスタイルを指定するための言語です。
+            </div>
+            <div id="tab03">
+                JavaScript（ジャバスクリプト）とは、
+                プログラミング言語のひとつである。
+                Javaと名前が似ているが、全く異なるプログラミング言語である。
+                JavaScriptはプロトタイプベースのオブジェクト指向スクリプト言語であるが、
+                クラスなどのクラスベースに見られる機能も取り込んでいる。
+            </div>
+          </div>
+        </div>
+      </div>
+
   <!-- 宿題 -->
   <div class="q-box">
       <h2>宿題</h2>
       <p class="description">
         ボタンを押すと画像が出たり消えたり
       </p>
-      <div id="js-picshow-btn" class="btn">出てり</div>
+      <div id="js-picshow-btn" class="btn">出たり</div>
       <div id="js-pichide-btn" class="btn">消えたり</div>
       <div id="pic">
           <img src="assets/IMG_8746.JPG" alt="サンプル画像">
       </div>
   </div>
-
 
 
 <!-- JSの方が軽いがjQueryの方が書くコードが減る -->
